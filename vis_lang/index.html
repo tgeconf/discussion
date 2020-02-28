@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <script>
+        let password = "";
+        password = prompt('Password pls:', '');
+        if (password !== 'CanisUI2020') {
+            alert("Sorry, wrong password.");
+            window.opener = null;
+            window.close();
+        } 
+    </script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .txt {
+            padding: 20px;
+        }
+
+        .row {
+            display: inline-block;
+            width: 100%;
+            background: #dedede;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+        }
+
+        .left {
+            float: left;
+            box-sizing: border-box;
+            width: 445px;
+            padding: 30px 10px;
+        }
+
+        .left img {
+            height: 260px;
+        }
+
+        .right {
+            float: left;
+            box-sizing: border-box;
+            margin-left: 30px;
+            padding: 30px 10px;
+            background: #fff;
+            width: calc(100% - 475px);
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='txt'>
+        <p>some refinement other than those from discussion:</p>
+        <ul>
+            <li>put the "duration" icon together with "effect type" and "easing", we still need this to illustrate
+                whether it is data encoded or not (gantt chart example).</li>
+            <li>suggestion: maybe we remove the blue rect above "..." ? just keep the number and "...", cause this time
+                span might include "delay" as well, not just "duration".</li>
+        </ul>
+    </div>
+    <div class='row'>
+        <div class='left'><img src='img/bar.gif' /></div>
+        <div class='right'><img src='img/bar.png' /></div>
+    </div>
+    <div class='row'>
+        <div class='left'><img src='img/mushroom.gif' /></div>
+        <div class='right'><img src='img/mushroom.png' /></div>
+    </div>
+    <div class='row'>
+        <div class='left'><img src='img/pie.gif' /></div>
+        <div class='right'><img src='img/pie.png' /></div>
+    </div>
+    <div class='row'>
+        <div class='left'><img src='img/os.gif' /></div>
+        <div class='right'><img src='img/os.png' /></div>
+    </div>
+    <div class='row'>
+        <div class='left'><img src='img/line.gif' /></div>
+        <div class='right'><img src='img/line.png' /></div>
+    </div>
+    <div class='row'>
+        <div class='left'><img src='img/gantt.gif' /></div>
+        <div class='right'><img src='img/gantt.png' /></div>
+    </div>
+</body>
+
+</html>

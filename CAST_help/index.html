@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Canis</title>
+    <title>CAST Tutorial</title>
     <meta charset="utf-8">
     <link rel='icon' href='logo.ico' type='image/x-icon' />
     <link rel="stylesheet" type="text/css" href="style/main.css" />
@@ -70,18 +70,61 @@
                 </ul>
             </aside>
             <section class='main-content'>
-                <!-- staticRepre -->
+                <!-- Overview -->
                 <h1 id='overview'>Overview</h1>
-                <p>CanisUI uses a series of visual encodings to describe and generate expressive chart
+                <p>CAST uses a series of visual encodings to describe and generate expressive chart
                     animations.</p>
 
-                <!-- staticRepre -->
+                <!-- Visual Encodings -->
                 <h1 id='visEncoding'>Visual Encodings</h1>
                 <p>According to Canis grammar, animations of a chart are composed of a series of aniunits. Each aniunit
                     describes the animation of the selected marks by partitioning them into mark untis and bind timing
-                    and animation effects to each mark unit. 
-                    The animation can be represented with a frame sequence.
-                    CanisUI uses the last frame of the animation of the mark unit as the keyframe of this  </p>
+                    and animation effects to each unit. </p>
+
+                <h2>Keyframe</h2>
+                <p>Chart animations can be represented with a keyframe sequence. For each mark
+                    unit, CAST selects the last frame of its animation as the keyframe.</p>
+
+                <h2>Keyframe Group</h2>
+                <p></p>
+
+                <h2>Timging Illustration</h2>
+                <p></p>
+
+                <h2>Relative Timing Representation</h2>
+                <p></p>
+                <h3>Relative Timing Between Keyframes</h3>
+                <p></p>
+                <h3>Relative Timing Between Keyframe Groups</h3>
+                <p></p>
+
+
+                <!-- User Interface Components -->
+                <h1 id='uiComponents'>User Interface Components</h1>
+                <p>The user interface of CAST consists of the following components: </p>
+                <ol type='A'>
+                    <li>
+                        <b>Dataset Panel</b>: Showing the dataset used to generate the chart.
+                    </li>
+                    <li>
+                        <b>Chart Panel</b>: The input chart, which is also for mark selection.
+                    </li>
+                    <li>
+                        <b>Animation Panel</b>: Preview the generated animation.
+                    </li>
+                    <li>
+                        <b>Keyframe Panel</b>: Illustrating and authoring how the chart is animated using static visual
+                        representations.
+                    </li>
+                </ol>
+                <div class='single-col-img-container'>
+                    <img src='./img/UIComponent.png'>
+                </div>
+
+                <!-- Chart Preparation -->
+                <h1 id='chartPrep'>Chart Preparation</h1>
+
+
 
                 <!-- Canis -->
                 <h1 id='anichart'>Canis</h1>

@@ -217,6 +217,17 @@ table tr td a:hover, p a:hover {
     margin-bottom: 0;
 }
 
+.single-col-img-container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 786px;
+}
+
+.single-col-img-container img {
+    width: 100%;
+}
+
 .example {
     display: flex;
     align-items: stretch;

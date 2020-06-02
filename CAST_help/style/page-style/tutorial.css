@@ -228,6 +228,17 @@ table tr td a:hover, p a:hover {
     width: 100%;
 }
 
+.image-flow {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 786px;
+}
+
+.image-flow img {
+    float: left;
+}
+
 .example {
     display: flex;
     align-items: stretch;

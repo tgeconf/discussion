@@ -6,6 +6,7 @@
     <link rel='icon' href='logo.ico' type='image/x-icon' />
     <link rel="stylesheet" type="text/css" href="style/main.css" />
     <link rel="stylesheet" type="text/css" href="style/page-style/tutorial.css" />
+    <script type='text/javascript' src='js/jquery-3.3.1.min.js'></script>
 </head>
 
 <body>
@@ -27,56 +28,39 @@
         <div class='center-page'>
             <aside class='sidebar-container'>
                 <ul class='sidebar-nav'>
-                    <!-- <li class='sidebar-nav-item'>
+                    <li class='sidebar-nav-item'>
                         <a id='overviewLink' href='#'>Overview</a>
                     </li>
                     <li class='sidebar-nav-item'>
-                        <a id='anichartLink' href='#'>Canis</a>
-                    </li>
-                    <li class='sidebar-nav-item'>
-                        <a id='chartLevelLink' href='#'>Chart-Level Spec</a>
+                        <a id='anichartLink' href='#'>Visual Representations</a>
                     </li>
                     <ul class='sub-nav'>
                         <li class='sidebar-nav-item sub-nav-item'>
-                            <a id='chartLink' href='#'>Chart</a>
+                            <a id='chartLink' href='#'>Keyframe</a>
                         </li>
                         <li class='sidebar-nav-item sub-nav-item'>
-                            <a id='facetLink' href='#'>Facet</a>
+                            <a id='facetLink' href='#'>Keyframe Group</a>
                         </li>
                         <li class='sidebar-nav-item sub-nav-item'>
-                            <a id='animationLink' href='#'>Animation</a>
+                            <a id='animationLink' href='#'>Symbolic Representation</a>
+                        </li>
+                        <li class='sidebar-nav-item sub-nav-item'>
+                            <a id='animationLink' href='#'>Relative Timing Representation</a>
                         </li>
                     </ul>
                     <li class='sidebar-nav-item'>
-                        <a id='markLevelLink' href='#'>Mark-Level Spec</a>
+                        <a id='chartLevelLink' href='#'>UI Components</a>
                     </li>
-                    <ul class='sub-nav'>
-                        <li class='sidebar-nav-item sub-nav-item'>
-                            <a id='selectionLink' href='#'>Selection</a>
-                        </li>
-                        <li class='sidebar-nav-item sub-nav-item'>
-                            <a id='groupingLink' href='#'>Grouping</a>
-                        </li>
-                        <li class='sidebar-nav-item sub-nav-item'>
-                            <a id='actionLink' href='#'>Action</a>
-                        </li>
-                    </ul>
-                    <li class='sidebar-nav-item'>
-                        <a id='webAppLink' href='#'>Web Application</a>
-                    </li>
-                    <li class='sidebar-nav-item'>
-                        <a href='./marker/index.html'>data-enriched SVG</a>
-                    </li> -->
                 </ul>
             </aside>
             <section class='main-content'>
                 <!-- Overview -->
                 <h1 id='overview'>Overview</h1>
-                <p>CAST uses a series of visual encodings to describe and generate expressive chart
+                <p>CAST uses a series of visual representations to describe and generate expressive chart
                     animations.</p>
 
                 <!-- Visual Encodings -->
-                <h1 id='visEncoding'>Visual Encodings</h1>
+                <h1 id='visEncoding'>Visual Representations</h1>
                 <p>According to Canis grammar, animations of a chart are composed of a series of aniunits. Each aniunit
                     describes the animation of the selected marks by partitioning them into mark untis and bind timing
                     and animation effects to each unit. </p>
@@ -84,21 +68,47 @@
                 <h2>Keyframe</h2>
                 <p>Chart animations can be represented with a keyframe sequence. For each mark
                     unit, CAST selects the last frame of its animation as the keyframe. As shown in the following
-                    example, the bar chart animation on the left can be represented with a series of frames, and three
-                    keyframes are extracted by CAST to describe this animation.</p>
+                    example, the animation of the facet dot plots can be represented with a series of frames, and one
+                    keyframe for each cell is extracted by CAST to describe this animation.</p>
 
-                <div class='image-flow'>
-                    <img src='./img/kf_illus.gif' style='height:74px' />
-                    <img src='./img/kf_illus.png' style='height:84px' />
+                <div class='example'>
+                    <div class='example-image'>
+                        <img height='160px' src='./img/kf_illus.gif' />
+                    </div>
+                    <div class='example-text'>
+                        <p><b>Chart</b>: Each dot represents one sample. All dots are grouped by Odor along X axis and
+                            grouped by Surface along Y axis. Meanwhile Color encodes whether the sample is Edible.</p>
+                        <p><b>Animation</b>: For all dots, animate row by row, and within each row, animate by cell.
+                        </p>
+                    </div>
                 </div>
-                <br /><br /><br />
-
+                <div class='single-col-img-container'>
+                    <img src='./img/kf_illus.png'>
+                </div>
 
                 <h2>Keyframe Group</h2>
-                <p></p>
+                <p>The animation is used to convey data patterns. Thus the smallest unit within animation (aniunit) is
+                    created by gradually grouping all visual marks with data variables. And a hierarchical structure
+                    will be generated from this grouping procedure. Taking the previous animation as an example, all the
+                    dots are first grouped by Surface, then by Odor. CAST uses frames to represent this grouping
+                    hierarchy, and the grey scale of the background color of the frame indicates the depth level of this
+                    group. </p>
+                <div class='single-col-img-container'>
+                    <img src='./img/kfGroup.png'>
+                </div>
 
-                <h2>Timging Illustration</h2>
-                <p></p>
+                <h2>Symbolic Representation</h2>
+                <p>CAST uses the following properties to describe the animation of each aniunit:</p>
+                <ul>
+                    <li><b>Duration</b>: The duration time of the animation. Represented by a blue span with an arrow in
+                        the center, the width of the span indicates the length of duration time.</li>
+                    <li><b>Delay</b>: The delay time of the animation of this aniunit. Represneted by an orange span
+                        with an arrow in the center, the width indicates the length of delay time. </li>
+                    <li><b>Effect</b>: By which kind of effect this aniunit is animated. Each kind of effect has its
+                        corresponding icon.</li>
+                    <li><b>Easing</b>: What easing function this aniunit uses to animate. Each easing function has its
+                        corresponding icon.</li>
+                </ul>
 
                 <h2>Relative Timing Representation</h2>
                 <p></p>

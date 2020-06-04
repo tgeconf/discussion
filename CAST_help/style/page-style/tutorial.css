@@ -222,6 +222,7 @@ table tr td a:hover, p a:hover {
 .single-col-img-container {
     margin-top: 1em;
     margin-bottom: 1em;
+    text-align: center;
     width: 100%;
     /* max-width: 786px; */
 }

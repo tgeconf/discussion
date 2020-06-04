@@ -192,6 +192,7 @@ table tr td a:hover, p a:hover {
     padding-left: 1em;
     padding-top: 0.25em;
     border-left: 2px solid #eee;
+    line-height: 24px ! important;
 }
 
 .sub-sub-nav-item {

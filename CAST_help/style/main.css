@@ -54,6 +54,7 @@ p, li {
     font: 400 16px/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 30px;
     font-size: 16px;
+    text-align: justify;
 }
 
 h1, h2, h3 {
@@ -74,6 +75,10 @@ h2 {
 
 h3 {
     font-size: 40px;
+}
+
+:target {
+    padding-top: 80px;
 }
 
 .logo {

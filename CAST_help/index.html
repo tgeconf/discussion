@@ -62,7 +62,10 @@
                             <a href='#selLink'>Selecting</a>
                         </li>
                         <li class='sidebar-nav-item sub-nav-item'>
-                            <a href='#'></a>
+                            <a href='#seqLink'>Sequencing</a>
+                        </li>
+                        <li class='sidebar-nav-item sub-nav-item'>
+                            <a href='#animationLink'>Animating</a>
                         </li>
                     </ul>
                 </ul>
@@ -243,6 +246,8 @@
                 </div>
 
                 <h2 id='selLink'>Selecting</h2>
+                <p>Mark selection is to decide which marks to animate first (which also decides the scale of the mark
+                    unit in one aniunit, for example to animate by row)</p>
 
                 <h3>Selection Tools</h3>
                 <div class='single-col-img-container'>
@@ -283,7 +288,27 @@
                 </ul>
 
                 <h3>Suggestion Mode</h3>
+                <p>As shown in the figure in Selection Tools, there is one more button in the toolbox of chart panel. It
+                    is used to activate/deactivate the suggestion mode of the selection. When the suggestion mode is
+                    activated, the system will automatically select marks from the unselected ones with the same values
+                    of the same categorical attributes as those user-selected marks. Here is an example shown below:
+                </p>
+                <div class='single-col-img-container'>
+                    <img src='./img/suggestion.png' />
+                </div>
+
+                <h2 id='seqLink'>Sequencing</h2>
+                <p>There are small plus buttons before keyframe groups who have marks that can be further partitioned
+                    into smaller mark units in order to animate them in a more detailed animation sequence. Once the
+                    marks are selected in the Chart Panel, drag the selected marks to the Keyframe Panel, and those plus
+                    buttons before the keyframe groups who can be further partitioned with the selected marks as one
+                    mark unit will be highlighted. Drop the selected marks on one plue button and you will start to
+                    create the animation sequence of the marks of the corresponding keyframe group.</p>
+                <p>An example is shown in the figure below. Once you decided what to animate in the first keyframe, </p>
+
+                <h2 id='animationLink'>Animating</h2>
                 <p></p>
+
             </section>
         </div>
     </div>

@@ -207,10 +207,10 @@
                 <ul>
                     <li><b>Step 1 (Importing)</b>: Create chart with Charticulator, Vega, or D3, then
                         using our online or your own customized toolkit to generate the DSVG input.</li>
-                    <li><b>Step 2 (Selecting)</b>: Select the smallest mark unit in animation.</li>
+                    <li><b>Step 2 (Selecting)</b>: Select the smallest mark unit (marks in 1st keyframe) in animation.
+                    </li>
                     <li><b>Step 3 (Sequencing)</b>: Based on the selected mark unit and marks in the chart,
-                        select the desired animation sequence (decide how to partition the marks in the chart into mark
-                        units).
+                        select the desired animation sequence.
                     </li>
                     <li><b>Step 4 (Animating)</b>: Bind timing (duration, delay) and other
                         animation properties (effect, easing) to each mark unit.</li>
@@ -228,21 +228,19 @@
                     <li>Vega (.json)</li>
                     <li>D3 (.svg)</li>
                 </ul>
-                <p>After importing the charts, just hit the download button to download the DSVG file.</p>
+                <p>After importing charts, you can edit the class names in the editor panel, or just hit the download
+                    button to download the DSVG file.</p>
 
-                <h3>Loading Chart</h3>
-                <p>Once the DSVG file is ready, click the 'load chart' button on the navigation bar to import the chart.
-                </p>
-
-                <div class='single-col-img-container'>
-                    <img src='./img/nav.png' style='width: 80%' />
-                </div>
-
-                <h3>Loading Project</h3>
-                <p>Click 'open project' to start with an example project or some local project.</p>
+                <h3>Loading</h3>
+                <p> Click "Open" on the navigation bar to :</p>
+                <ul>
+                    <li>Load Charts: load one or more DSVG files you just prepared.</li>
+                    <li>Load Local Project: load the project you saved on your disk.</li>
+                    <li>Load Example Project: load one example in the example list.</li>
+                </ul>
 
                 <div class='single-col-img-container'>
-                    <img src='./img/loadPro.png' style='width: 60%' />
+                    <img src='./img/nav.png' style='width: 90%' />
                 </div>
 
                 <h2 id='selLink'>Selecting</h2>
@@ -303,10 +301,25 @@
                     marks are selected in the Chart Panel, drag the selected marks to the Keyframe Panel, and those plus
                     buttons before the keyframe groups who can be further partitioned with the selected marks as one
                     mark unit will be highlighted. Drop the selected marks on one plue button and you will start to
-                    create the animation sequence of the marks of the corresponding keyframe group.</p>
-                <p>An example is shown in the figure below. Once you decided what to animate in the first keyframe, </p>
+                    create new animation sequence of the marks of the corresponding keyframe group.</p>
+                <p>An example is shown in the figure below.</p>
+
+                <div class='single-col-img-container'>
+                    <img src='./img/kf_suggestion.png' />
+                </div>
 
                 <h2 id='animationLink'>Animating</h2>
+                <p>This step is to bind animation properties to to each keyframe group and keyframe. Including timing
+                    properties (duration and delay) and effect properties (effect type and easing)</p>
+
+                <h3>Binding Timing to Keyframes</h3>
+                <p>Each keyframe has a duration indicating the duration of the animation of its corrsponding mark unit.
+                </p>
+
+                <h3>Binding Timing to Keyframe Groups</h3>
+                <p></p>
+
+                <h3>Binding Effects to Keyframe Groups</h3>
                 <p></p>
 
             </section>

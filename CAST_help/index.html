@@ -212,7 +212,7 @@
                     <li><b>Step 3 (Sequencing)</b>: Based on the selected mark unit and marks in the chart,
                         select the desired animation sequence.
                     </li>
-                    <li><b>Step 4 (Animating)</b>: Bind timing (duration, delay) and other
+                    <li><b>Step 4 (Animating)</b>: Specify timing (duration, delay) and other
                         animation properties (effect, easing) to each mark unit.</li>
                 </ul>
                 <p>Note that step 2 to step 4 can be repeated to create multiple aniunits in order to specify different
@@ -312,14 +312,27 @@
                 <p>This step is to bind animation properties to to each keyframe group and keyframe. Including timing
                     properties (duration and delay) and effect properties (effect type and easing)</p>
 
-                <h3>Binding Timing to Keyframes</h3>
-                <p>Each keyframe has a duration indicating the duration of the animation of its corrsponding mark unit.
-                </p>
+                <h3>Specifying Timing to Keyframes</h3>
+                <p>Each keyframe has a duration bar indicating the duration of the animation of its corrsponding mark
+                    unit. Drag the bar on the bottom of the keyframe to add/remove delay or adjust relative timing
+                    (start with/after previous). Note that keyframes in the same group should share the same animation
+                    property values. Thus to update one keyframe will update all keyframe within the same group.</p>
 
-                <h3>Binding Timing to Keyframe Groups</h3>
+                <div class='single-col-img-container'>
+                    <img src='./img/bind_kf_timing.png' />
+                </div>
+
+                <p>Drag the right border of the delay/duration bar or enter the exact number in the popup when hovering
+                    mouse on the delay/duration bar to adjust the length of the duration or delay.</p>
+                
+                <div class='single-col-img-container'>
+                    <img src='./img/adjust_timing.png' />
+                </div>
+
+                <h3>Specifying Timing to Keyframe Groups</h3>
                 <p></p>
 
-                <h3>Binding Effects to Keyframe Groups</h3>
+                <h3>Specifying Effects to Keyframe Groups</h3>
                 <p></p>
 
             </section>
